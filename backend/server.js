@@ -6,9 +6,15 @@ const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
 const userRoutes = require("./routes/user"); // ✅ Ensure userRoutes is imported
  
+// Require cors
+const cors = require("cors");
+
 // Initialize Express app
 const app = express();
-    
+
+// Allow cross-origin requests
+app.use(cors());
+
 // Middleware
 app.use(express.json());
 app.use((req, res, next) => {
