@@ -8,7 +8,7 @@ const userRoutes = require("./routes/user"); // ✅ Ensure userRoutes is importe
  
 // Initialize Express app
 const app = express();
- 
+    
 // Middleware
 app.use(express.json());
 app.use((req, res, next) => {
